@@ -1,0 +1,25 @@
+ Detest - A Simple C11 test framework
+=====================================
+
+Features:
+
+* No dynamic allocations
+* No standard library usage (except for vsnprintf)
+* Thread safe via _Atomic
+
+Example:
+[source, c]
+----
+#include "detest.h"
+
+int main(int ac, char *av[])
+{
+	struct demeta d = { 0 };
+
+	detest("should fail given untrue expression", 1 == 2, &d, 0);
+	detest("should succeed given a true expression", 1 == 1, &d, 0);
+	detest("should not be printed", 1 == 1, &d, DE_QUIET);
+
+	return dereport(&d);
+}
+----
