@@ -3,7 +3,6 @@
 #include <stdatomic.h>
 #include <stddef.h>
 
-
 #define DE_FAIL (1 << 0)
 #define DE_HARDFAIL (1 << 1)
 #define DE_NOCOLOR (1 << 3)

@@ -11,8 +11,6 @@
 #define AFYELLOW "\x1b[33m"
 #define ARESET "\x1b[0m"
 
-#define DE_NOCOLOR (1 << 3)
-
 void deresult(const char *s, const char *ex, const char *fl, unsigned ln, struct demeta *dm, int f)
 {
 	const char *check = f & DE_NOCOLOR ? UCHECK : AFGREEN UCHECK ARESET,
