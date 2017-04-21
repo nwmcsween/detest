@@ -3,9 +3,10 @@
 
 Features:
 
-* No dynamic allocations
-* No standard library usage (except for vsnprintf)
-* Thread safe via _Atomic
+* No dynamic allocations.
+* No standard library usage (except for vsnprintf).
+* Thread safe via _Atomic.
+* No macro magic, explicit and somewhat simple.
 
 Example:
 [source, c]
